@@ -78,6 +78,6 @@ sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githu
 ```
 9. We join the worker nodes.. with sudo kubeadm join using the master node IP and the tokens provided.
 ```bash
-sudo kubeadm init <master_node> --token XXXXXX \
+sudo kubeadm init <master_node_ip> --token XXXXXX \
 --discovery-token-ca-cert-hash sha256:YYYYYYY
 ```
