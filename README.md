@@ -1,6 +1,6 @@
 # kubeadm_multi_node_cluster_vagrant
 
-This project provides a Vagrant setup for creating a multi-node Kubernetes cluster using kubeadm.
+This project provides a Vagrant setup for creating a multi-node Kubernetes cluster using kubeadm with static IPs.
 
 ## Prerequisites
 
