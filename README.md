@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed on your machine:
    vagrant ssh <name_of_VM>
    chmod +x /home/vagrant/setup_k8s.sh
    sudo /home/vagrant/setup_k8s.sh 
-
+   ´´´
    This will follow the instructions from Kubernetes guide to setup the cluster using kubeadm
    
 7. Once finished, we initialize the cluster with:
