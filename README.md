@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your machine:
 3. Navigate to the project directory:
 
    ```bash
-   cd kubeadm_multi_node_cluster_vagran
+   cd kubeadm_multi_node_cluster_vagrant
    
 4. Run the vagrantfile to start building the VMs
 
