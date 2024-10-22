@@ -76,7 +76,7 @@ Before you begin, ensure you have the following installed on your machine:
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml 
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/custom-resources.yaml 
 ```
-11. We join the other nodes.. with sudo kubeadm join using the master node IP and the tokens provided.
+11. We join the worker nodes.. with sudo kubeadm join using the master node IP and the tokens provided.
 ```bash
 sudo kubeadm init <master_node> --token XXXXXX \
 --discovery-token-ca-cert-hash sha256:YYYYYYY
