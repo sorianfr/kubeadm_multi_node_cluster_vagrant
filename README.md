@@ -56,7 +56,7 @@ Before you begin, ensure you have the following installed on your machine:
 8. Once finished, we initialize the cluster with:
    ```bash
    sudo kubeadm init --apiserver-advertise-address=192.168.86.103 --pod-network-cidr=192.168.0.0/16 
-
+   ```
 9. It will prompt the following message:
 
    Your Kubernetes control-plane has initialized successfully!
@@ -67,14 +67,14 @@ Before you begin, ensure you have the following installed on your machine:
    mkdir -p $HOME/.kube
    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
+   ```
 10. You should now deploy a pod network to the cluster. We will use Calico
 
    Quickstart for Calico on Kubernetes | Calico Documentation (tigera.io) 
    ```bash
    sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml 
    sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/custom-resources.yaml 
-
+   ```
 11. We join the other nodes.. with sudo kubeadm join...
 
     
