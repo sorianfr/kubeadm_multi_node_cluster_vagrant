@@ -48,7 +48,6 @@ def provision_kubernetes_node(node)
     echo "192.168.86.104 nodo01" | sudo tee -a /etc/hosts
     echo "192.168.86.105 nodo02" | sudo tee -a /etc/hosts
   SHELL
-  #node.vm.provision "setup-ssh", type: "shell", path: "ubuntu/ssh.sh"
   # Upload and execute setup_k8s.sh in parallel
   #node.vm.provision "setup-k8s", type: "shell", path: "setup_k8s.sh"
 end
