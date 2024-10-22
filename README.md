@@ -35,7 +35,7 @@ Before you begin, ensure you have the following installed on your machine:
    Please note that this setup uses static ips which are all defined in the Vagrantfile, together with the names and resources of each VM.
    You should ensure these IPs are available in your network.
    
-6. Once the 3 VMs are up & running we copy setup_k8s.sh file onto each machine. For this we use 
+5. Once the 3 VMs are up & running we copy setup_k8s.sh file onto each machine. For this we use 
 
    ```bash
    vagrant plugin install vagrant-scp   
@@ -54,11 +54,11 @@ Before you begin, ensure you have the following installed on your machine:
    https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
    https://github.com/containerd/containerd/blob/main/docs/getting-started.md
    
-8. Once finished, we initialize the cluster with:
+6. Once finished, we initialize the cluster with:
    ```bash
    sudo kubeadm init --apiserver-advertise-address=192.168.86.103 --pod-network-cidr=192.168.0.0/16 
    ```
-9. It will prompt the following message:
+7. It will prompt the following message:
 
    Your Kubernetes control-plane has initialized successfully!
 
@@ -69,14 +69,14 @@ Before you begin, ensure you have the following installed on your machine:
    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
    ```
-10. You should now deploy a pod network to the cluster. We will use Calico
+8. You should now deploy a pod network to the cluster. We will use Calico
 
       Quickstart for Calico on Kubernetes | Calico Documentation (tigera.io) 
 ```bash
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml 
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/custom-resources.yaml 
 ```
-11. We join the worker nodes.. with sudo kubeadm join using the master node IP and the tokens provided.
+9. We join the worker nodes.. with sudo kubeadm join using the master node IP and the tokens provided.
 ```bash
 sudo kubeadm init <master_node> --token XXXXXX \
 --discovery-token-ca-cert-hash sha256:YYYYYYY
