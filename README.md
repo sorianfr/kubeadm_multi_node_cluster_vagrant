@@ -49,9 +49,10 @@ Before you begin, ensure you have the following installed on your machine:
    chmod +x /home/vagrant/setup_k8s.sh
    sudo /home/vagrant/setup_k8s.sh 
    ```
-   This will follow the instructions from Kubernetes guide to setup the cluster using kubeadm
+   This will follow the instructions from Kubernetes guide to setup the cluster using kubeadm and with container runtime containerd
 
    https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
+   https://github.com/containerd/containerd/blob/main/docs/getting-started.md
    
 8. Once finished, we initialize the cluster with:
    ```bash
