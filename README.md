@@ -39,7 +39,7 @@ Before you begin, ensure you have the following installed on your machine:
    vagrant scp setup_k8s.sh master:/home/vagrant/setup_k8s.sh 
    vagrant scp setup_k8s.sh nodo01:/home/vagrant/setup_k8s.sh 
    vagrant scp setup_k8s.sh nodo02:/home/vagrant/setup_k8s.sh 
-
+   ```
    On each machine:
    ```bash
    vagrant ssh <name_of_VM>
