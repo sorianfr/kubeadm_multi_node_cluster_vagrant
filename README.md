@@ -70,7 +70,7 @@ Before you begin, ensure you have the following installed on your machine:
    ```
 10. You should now deploy a pod network to the cluster. We will use Calico
 
-   Quickstart for Calico on Kubernetes | Calico Documentation (tigera.io) 
+      Quickstart for Calico on Kubernetes | Calico Documentation (tigera.io) 
 ```bash
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/tigera-operator.yaml 
 sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/custom-resources.yaml 
