@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed on your machine:
 
    ```bash
    vagrant up
-   ´´´
+   ```
    Please note that this setup uses static ips which are all defined in the Vagrantfile, together with the names and resources of each VM.
    You should ensure these IPs are available in your network.
    
